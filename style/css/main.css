@@ -1,0 +1,49 @@
+/**
+主要css文件
+ */
+
+#siteurl{
+    width: 800px;
+    border: 2px solid green;
+    height: 30px;
+}
+
+#sourcebox {
+    border: 2px solid green;
+    font-size: 16px;
+    padding: 5px;
+    height: 300px;
+    width: 99%;
+}
+#msgBoxContainer ol{
+    margin: 0;
+    border: 1px solid #ccc;
+}
+
+.controllerRow {
+    margin: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+.hidden_div{
+    opacity: 0;
+    height: 1px;
+    overflow: hidden;
+}
+
+.rs_number{
+    color: green;
+}
+.rs_key {
+    color: blue;
+    width: 200px;
+    display: inline-block;
+}
+.rs_word{
+    color: red;
+}
+
+.controllerRow p q{
+    color: red;
+}

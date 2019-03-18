@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2018年最新版广告法禁用词检测</title>
+    <meta name="author" content="xslooi"/>
+    <meta name="copyright" content="xslooi"/>
+    <!--自定义css-->
+    <link rel="stylesheet" type="text/css" href="style/css/main.css" />
+    <!--jquery库文件-->
+    <script type="text/javascript" src="style/js/jquery-1.12.4.min.js"></script>
+    <!--复制剪切板js-->
+    <script type="text/javascript" src="style/js/clipboard/clipboard.min.js"></script>
+    <!--自定义js-->
+    <script type="text/javascript" src="style/js/main.js"></script>
+
+</head>
+<body>
+<form name="mainForm" id="mainForm">
+    <fieldset>
+        <legend>网址输入框</legend>
+        <div id="inputSiteBox">
+            <input name="siteurl" id="siteurl" placeholder="请输入网址">
+            <b style="color: red;"> * 网址和源码任选其一，同时填写则只解析源码</b>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>源代码输入框</legend>
+        <div id="inputSourceCodeBox">
+            <textarea name="sourcebox" id="sourcebox" placeholder="请粘贴需要检测的文本或网页源代码"></textarea>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>操作状态栏</legend>
+        <div id="msgBoxContainer">
+                <b style="color: lightslategray;">暂无操作</b>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>控制按钮面板</legend>
+
+        <div class="controllerRow">
+            <label>类型行业：</label>
+            <input id="type_normal" type="radio" name="platform" value="normal" checked="checked">
+            <label for="type_normal">一般性关键词</label>
+            <input id="type_food" type="radio" name="platform" value="food">
+            <label for="type_food">食品行业</label>
+            <input id="type_cosmetics" type="radio" name="platform" value="cosmetics">
+            <label for="type_cosmetics">化妆品行业</label>
+            <input id="type_medical" type="radio" name="platform" value="medical">
+            <label for="type_medical">医疗及医疗器械</label>
+            <input id="tpee_realty" type="radio" name="platform" value="realty">
+            <label for="tpee_realty">房地产相关</label>
+        </div>
+        <div class="controllerRow">
+            <label>功能按钮：</label>
+            <button class="btn" data-clipboard-target="#sourcebox" value="start" type="button"> 开始检测 </button>
+        </div>
+        <div class="controllerRow">
+            <label>基本说明：</label>
+            <p style="display: inline;color:green">本程序是关键词的完全精确匹配确定有无。违法词位置请自行搜索（浏览器 CTRL + F）下面<q>匹配词</q>查找。因本程序检索HTML中所有字符但不包括：外部链接样式、图片、JS等内容故有遗漏和冗余（如：样式中<q>100%</q>、JS中<q>第一</q>、注释中<q>最先</q> 等）。请自行判断和处理！<a href="2018_Prohibited_words_in_Advertising_Law.docx">2018年最新版广告法禁用词.docx 点击下载</a></p>
+        </div>
+    </fieldset>
+
+</form>
+
+<fieldset>
+    <legend>检测结果</legend>
+
+    <div class="controllerRow" id="checkResults">
+        <ol><li>示例内容：>>><b>序号：</b><em class="rs_number">[01]</em> &nbsp; &nbsp; <b>关键字：</b><em class="rs_key">【最】</em> <b>匹配词：</b><em class="rs_word">最</em></li></ol>
+    </div>
+
+</fieldset>
+
+
+</body>
+</html>
